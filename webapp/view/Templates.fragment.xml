@@ -6,7 +6,7 @@
         <content>
             <VBox>
 
-                <RadioButtonGroup id="templateChoices" valueState="Warning">
+                <RadioButtonGroup id="templateChoices" valueState="Warning" >
                     <RadioButton id="CSTLTEP" text="JPC Submission for CSTLTEP" />
                     <RadioButton id="CAR" text="JPC Submission for CAR" />
                     <RadioButton id="SSN" text="JPC Submission for SSN" />

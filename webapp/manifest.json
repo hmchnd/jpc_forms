@@ -96,6 +96,13 @@
           "target": [
             "TargetListView"
           ]
+        },
+        {
+          "name": "RouteTempletForm",
+          "pattern": "{selectedTemplate}",
+          "target": [
+            "TargettempletForm"
+          ]
         }
       ],
       "targets": {
@@ -105,6 +112,13 @@
           "clearControlAggregation": false,
           "viewId": "ListView",
           "viewName": "ListView"
+        },
+        "TargettempletForm": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "TempletForm",
+          "viewName": "TempletForm"
         }
       }
     },

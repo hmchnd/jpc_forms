@@ -5,7 +5,7 @@ sap.ui.define([
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller,Fragment) {
+    function (Controller, Fragment) {
         "use strict";
 
         return Controller.extend("com.sap.jpcsubmissionforms.controller.ListView", {
@@ -13,29 +13,29 @@ sap.ui.define([
 
                 let listModel = new sap.ui.model.json.JSONModel([{
 
-                    templateType:"JPC Submission for CSTLTEP",
-                    reqNumber:"REQ08052024",
-                    tendStgy:"Competetive",
-                    contractTitle:"Procurements of 100 office laptops",
-                    contractType:"Goods Procurement",
-                    estimatedValue:"5,000",
-                    currency:"USD",
-                    status:"Approved"
+                    templateType: "JPC Submission for CSTLTEP",
+                    reqNumber: "REQ08052024",
+                    tendStgy: "Competetive",
+                    contractTitle: "Procurements of 100 office laptops",
+                    contractType: "Goods Procurement",
+                    estimatedValue: "5,000",
+                    currency: "USD",
+                    status: "Approved"
                 },
                 {
 
-                    templateType:"JPC Submission for CAR",
-                    reqNumber:"REQ08052024",
-                    tendStgy:"Competetive",
-                    contractTitle:"Procurements of 100 office laptops",
-                    contractType:"Goods Procurement",
-                    estimatedValue:"5,000",
-                    currency:"USD",
-                    status:"Draft"
+                    templateType: "JPC Submission for CAR",
+                    reqNumber: "REQ08052024",
+                    tendStgy: "Competetive",
+                    contractTitle: "Procurements of 100 office laptops",
+                    contractType: "Goods Procurement",
+                    estimatedValue: "5,000",
+                    currency: "USD",
+                    status: "Draft"
                 }]);
-              this.getView().setModel(listModel,"listModel")
+                this.getView().setModel(listModel, "listModel")
             },
-            onNewSubmission:function(){
+            onNewSubmission: function () {
                 if (!this.newSubDialog) {
                     Fragment.load({
                         id: this.getView().getId(),
@@ -50,11 +50,17 @@ sap.ui.define([
                     this.newSubDialog.open()
                 }
             },
-            onCreateNewTemplate:function(){
+            onCreateNewTemplate: function () {
 
             },
-            onCancelDialog:function(){
+            onCancelDialog: function () {
                 this.newSubDialog.close()
+            },
+            onCreateNewTemplate: function () {
+                var selectedTemplate = this.getView().byId("templateChoices").getSelectedButton().getText();
+                selectedTemplate = selectedTemplate.replace(/ /g, "_");
+                this.getOwnerComponent().getRouter().navTo("RouteTempletForm", { selectedTemplate: selectedTemplate });
             }
+
         });
     });

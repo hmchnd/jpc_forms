@@ -1,0 +1,195 @@
+<mvc:View controllerName="com.sap.jpcsubmissionforms.controller.TempletForm"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns:core="sap.ui.core"
+    xmlns:uxap="sap.uxap"
+	>
+    <Page id="TempletForm" >
+        <content>
+           	<uxap:ObjectPageLayout id="ObjectPageLayout" upperCaseAnchorBar="false">
+		<uxap:headerTitle>
+			<uxap:ObjectPageHeader objectTitle="Template Form">
+			</uxap:ObjectPageHeader>
+		</uxap:headerTitle>
+
+		
+
+		<uxap:sections>
+		
+
+			<uxap:ObjectPageSection titleUppercase="false" title="1. Purpose">
+            <uxap:subSections>
+					<uxap:ObjectPageSubSection titleUppercase="false">
+						<uxap:blocks>
+                        <Button text="aaaa"></Button>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+            	<uxap:ObjectPageSection titleUppercase="false" title="2. Background">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection   titleUppercase="false">
+						<uxap:blocks>
+                        <Button text="bbbbbbbbbbbb"></Button>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+					<uxap:ObjectPageSubSection title="2.1 Justification for procurement " titleUppercase="false">
+						<uxap:blocks>
+                        <Button text="aaaa"></Button>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+					<uxap:ObjectPageSubSection title="2.2 Description Of Current Arrangement" titleUppercase="false">
+						<uxap:blocks>
+                        <Button text="aaaa"></Button>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+            <uxap:ObjectPageSection titleUppercase="false" title="3. Contracting Strategy">
+				<uxap:subSections>
+				<uxap:ObjectPageSubSection   titleUppercase="false">
+						<uxap:blocks>
+                        <Button text="bbbbbbbbbbbb"></Button>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+					<uxap:ObjectPageSubSection title="3.1 Scope of supplies/work/services " titleUppercase="false">
+
+						<uxap:blocks>
+                        <Button text="aaaa"></Button>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+					<uxap:ObjectPageSubSection title="3.2 Compensation, T and C" titleUppercase="false">
+						<uxap:blocks>
+                        <Button text="aaaa"></Button>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+                    <uxap:ObjectPageSubSection title="3.3 Currency Selection Rationale" titleUppercase="false">
+						<uxap:blocks>
+                        <Button text="aaaa"></Button>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+            <uxap:ObjectPageSection titleUppercase="false" title="4. Tendering Strategy">
+				<uxap:subSections>
+				<uxap:ObjectPageSubSection   titleUppercase="false">
+						<uxap:blocks>
+                        <Button text="bbbbbbbbbbbb"></Button>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+					<uxap:ObjectPageSubSection title="4.1 Tendering Evaluation Plan " titleUppercase="false">
+						<uxap:blocks>
+                        <Button text="aaaa"></Button>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+					<uxap:ObjectPageSubSection title="4.2 Tender List" titleUppercase="false">
+						<uxap:blocks>
+                        <Button text="aaaa"></Button>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+                    <uxap:ObjectPageSubSection title="4.3 Indicative Tender" titleUppercase="false">
+						<uxap:blocks>
+                        <Button text="aaaa"></Button>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+            <uxap:ObjectPageSection titleUppercase="false" title="5. HSE">
+            <uxap:subSections>
+					<uxap:ObjectPageSubSection titleUppercase="false">
+						<uxap:blocks>
+                        <Button text="aaaa"></Button>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+            <uxap:ObjectPageSection titleUppercase="false" title="6. Local Content">
+            <uxap:subSections>
+					<uxap:ObjectPageSubSection titleUppercase="false">
+						<uxap:blocks>
+                        <Button text="aaaa"></Button>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+            <uxap:ObjectPageSection titleUppercase="false" title="7. Operator Internal estimate of Cost and Quantity Estimation">
+				<uxap:subSections>
+				<uxap:ObjectPageSubSection   titleUppercase="false">
+						<uxap:blocks>
+                        <Button text="bbbbbbbbbbbb"></Button>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+					<uxap:ObjectPageSubSection title="7.1 Estimate Basis and Assumption " titleUppercase="false">
+						<uxap:blocks>
+                        <Button text="aaaa"></Button>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+                    
+					
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+             <!-- <uxap:ObjectPageSection titleUppercase="false" title="7. Operator Internal estimate of Cost and Quantity Estimation">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection title="7.1 Estimate Basis and Assumption " titleUppercase="false">
+						<uxap:blocks>
+                        <Button text="aaaa"></Button>
+
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+					
+				</uxap:subSections>
+			</uxap:ObjectPageSection> -->
+
+            <uxap:ObjectPageSection titleUppercase="false" title="8. Conclusion">
+            <uxap:subSections>
+					<uxap:ObjectPageSubSection titleUppercase="false">
+						<uxap:blocks>
+                        <Button text="aaaa"></Button>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+            <uxap:ObjectPageSection titleUppercase="false" title="9. Apendices">
+            <uxap:subSections>
+					<uxap:ObjectPageSubSection titleUppercase="false">
+						<uxap:blocks>
+                        <Button text="aaaa"></Button>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+
+			
+
+			
+
+
+		</uxap:sections>
+
+	</uxap:ObjectPageLayout>
+
+        </content>
+    </Page>
+</mvc:View>
