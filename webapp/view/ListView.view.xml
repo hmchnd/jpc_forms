@@ -1,0 +1,107 @@
+<mvc:View controllerName="com.sap.jpcsubmissionforms.controller.ListView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <fb:FilterBar id="filterbar" persistencyKey="myPersKey" useToolbar="false" search=".onSearch" filterChange=".onFilterChange" afterVariantLoad=".onAfterVariantLoad">
+                <fb:filterGroupItems>
+                    <fb:FilterGroupItem name="Template Type" label="Template Type" groupName="Group1" visibleInFilterBar="true">
+                        <fb:control>
+                            <MultiComboBox name="Template Type" selectionChange=".onSelectionChange">
+                                <core:Item key="JPC Submission for CSTLTEP" text="JPC Submission for CSTLTEP" />
+                                <core:Item key="JPC Submission for CAR" text="JPC Submission for CAR" />
+                                <core:Item key="JPC Submission for SSN" text="JPC Submission for SSN" />
+                            </MultiComboBox>
+                        </fb:control>
+                    </fb:FilterGroupItem>
+
+                    <fb:FilterGroupItem name="TENDERING STRATEGY" label="TENDERING STRATEGY" groupName="Group1" visibleInFilterBar="true">
+                        <fb:control>
+                            <Input />
+                        </fb:control>
+                    </fb:FilterGroupItem>
+
+                    <fb:FilterGroupItem name="CONTRACT NUMBER:" label="CONTRACT NUMBER:" groupName="Group1" visibleInFilterBar="true">
+                        <fb:control>
+                            <Input />
+                        </fb:control>
+                    </fb:FilterGroupItem>
+
+                    <fb:FilterGroupItem name="SUPPLIER" label="SUPPLIER" groupName="Group1" visibleInFilterBar="true">
+                        <fb:control>
+                            <Input />
+                        </fb:control>
+                    </fb:FilterGroupItem>
+
+                    <fb:FilterGroupItem name="CONTRACT TYPE" label="CONTRACT TYPE" groupName="Group1" visibleInFilterBar="true">
+                        <fb:control>
+                            <Input />
+                        </fb:control>
+                    </fb:FilterGroupItem>
+                </fb:filterGroupItems>
+            </fb:FilterBar>
+
+            <Table id="idTemplates" inset="false" mode="SingleSelectLeft" items="{listModel>/}">
+                <headerToolbar>
+                    <OverflowToolbar>
+
+                        <ToolbarSpacer/>
+
+                        <Button text="New JPC Submission" press="onNewSubmission" />
+                        <Button text="Copy" press="onCopy" />
+
+                        <Button text="Modify" press="onModify" />
+
+                    </OverflowToolbar>
+                </headerToolbar>
+
+                <columns>
+                    <Column width="12em">
+                        <Text text="Template Type" />
+                    </Column>
+                    <Column width="12em">
+                        <Text text="Requisition Number" />
+                    </Column>
+                    <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Text text="Tendering Strategy" />
+                    </Column>
+                    <Column minScreenWidth="Desktop" demandPopin="true">
+                        <Text text="Contract Title" />
+                    </Column>
+                    <Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+                        <Text text="Contract Type" />
+                    </Column>
+                    <Column>
+                        <Text text="Estimated Contract Value" />
+                    </Column>
+
+                     <Column>
+                        <Text text="Currency" />
+                    </Column>
+
+                    <Column>
+                        <Text text="Status" />
+                    </Column>
+
+                </columns>
+                <items>
+                    <ColumnListItem vAlign="Middle">
+                        <cells>
+                            <Text text="{listModel>templateType}" />
+                            <Text text="{listModel>reqNumber}" />
+                            <Text text="{listModel>tendStgy}" />
+                            <Text text="{listModel>contractTitle}" />
+                            <Text text="{listModel>contractType}" />
+                             <Text text="{listModel>estimatedValue}" />
+                            <Text text="{listModel>currency}" />
+                            <Text text="{listModel>status}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+
+        </content>
+    </Page>
+</mvc:View>

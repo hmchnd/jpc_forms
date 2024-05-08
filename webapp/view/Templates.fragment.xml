@@ -1,0 +1,28 @@
+<core:FragmentDefinition xmlns:upload="sap.m.upload"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog title="Select Template" contentWidth="30%">
+        <content>
+            <VBox>
+
+                <RadioButtonGroup id="templateChoices" valueState="Warning">
+                    <RadioButton id="CSTLTEP" text="JPC Submission for CSTLTEP" />
+                    <RadioButton id="CAR" text="JPC Submission for CAR" />
+                    <RadioButton id="SSN" text="JPC Submission for SSN" />
+                </RadioButtonGroup>
+
+            </VBox>
+
+
+        </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button text="Create" press="onCreateNewTemplate" />
+                <Button text="Cancel" press="onCancelDialog" />
+            </Toolbar>
+        </footer>
+
+    </Dialog>
+</core:FragmentDefinition>
