@@ -1,155 +1,531 @@
-<mvc:View controllerName="com.sap.jpcsubmissionforms.controller.TempletForm"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+<mvc:View
+    controllerName="com.sap.jpcsubmissionforms.controller.TempletForm"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
     xmlns="sap.m"
     xmlns:fb="sap.ui.comp.filterbar"
     xmlns:core="sap.ui.core"
     xmlns:uxap="sap.uxap"
-	>
-    <Page id="TempletForm" >
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+>
+    <Page id="TempletForm">
         <content>
-           	<uxap:ObjectPageLayout id="ObjectPageLayout" upperCaseAnchorBar="false">
-		<uxap:headerTitle>
-			<uxap:ObjectPageHeader objectTitle="Template Form">
-			</uxap:ObjectPageHeader>
-		</uxap:headerTitle>
+            <uxap:ObjectPageLayout
+                id="ObjectPageLayout"
+                upperCaseAnchorBar="false"
+            >
+                <uxap:headerTitle>
+                    <uxap:ObjectPageHeader objectTitle="Template Form" />
+                </uxap:headerTitle>
 
-		
+                <uxap:sections>
+                    <uxap:ObjectPageSection
+                        titleUppercase="false"
+                        title="Summary"
+                    >
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection titleUppercase="false">
+                                <uxap:blocks>
+                                    <f:SimpleForm
+                                        id="SimpleFormToolbar"
+                                        editable="true"
+                                        layout="ResponsiveGridLayout"
+                                        labelSpanXL="4"
+                                        labelSpanL="3"
+                                        labelSpanM="4"
+                                        labelSpanS="12"
+                                        adjustLabelSpan="false"
+                                        emptySpanXL="0"
+                                        emptySpanL="4"
+                                        emptySpanM="0"
+                                        emptySpanS="0"
+                                        columnsXL="2"
+                                        columnsL="1"
+                                        columnsM="1"
+                                        singleContainerFullSize="false"
+                                        ariaLabelledBy="Title1"
+                                    >
+                                        <f:content>
+                                            <Label text="REQUISITION NO" />
+                                            <Input value="" />
+                                            <Label text="DATE OF APPROVAL." />
+                                            <Input value="" />
+                                            <Label text="ICP NO:" />
+                                            <Input value="" />
+                                            <Label text="TENDERING STRATEGY:" />
+                                            <Input value="" />
+                                            <Label text="CONTRACT TITLE:" />
+                                            <Input value="" />
+                                            <Label text="CONTRACT TYPE:" />
+                                            <Input value="" />
+                                            <Label text="ESTIMATED CONTRACT VALUE:" />
+                                            <Input value="" />
+                                            <Label text="PROPOSED CONTRACT DURATION:" />
+                                            <Input value="" />
+                                            <Label text="OPTIONAL EXTENSIONS:" />
+                                            <Input value="" />
+                                            <Label text="TOTAL DURATION:" />
+                                            <Input value="" />
+                                            <Label text="SERVICES" />
+                                            <Input value="" />
+                                            <Label text="HSSE RISK" />
+                                            <Input value="" />
+                                            <Label text="CONTRACT NUMBER" />
+                                            <Input value="" />
+                                            <Label text="SUPPLIER NUMBER" />
+                                            <Input value="" />
+                                            <Label text="CONTRACT EXPIRY DATE" />
+                                            <Input value="" />
+                                            <Label text="CURRENCY" />
+                                            <Input value="" />
+                                            <Label text="LOCAL CONTENT POSITION" />
+                                            <Input value="" />
+                                        </f:content>
+                                    </f:SimpleForm>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>
 
-		<uxap:sections>
-		
+                    <uxap:ObjectPageSection
+                        titleUppercase="false"
+                        title="1. Purpose"
+                    >
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection titleUppercase="false">
+                                <uxap:blocks>
+                                    <Text text="To request JPC approval for the Contract Strategy (CS), Tender List (TL) and Tender Evaluation Plan (TEP) for the Provision of [Please state] (Services) for a period of five (5) years inclusive of two (2) optional extensions of one (1) year each with an estimated value of [Please state] as described herein."></Text>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>
 
-			<uxap:ObjectPageSection titleUppercase="false" title="1. Purpose">
-            <uxap:subSections>
-					<uxap:ObjectPageSubSection titleUppercase="false">
-						<uxap:blocks>
-                        <Button text="aaaa"></Button>
-						</uxap:blocks>
-					</uxap:ObjectPageSubSection>
-				</uxap:subSections>
-			</uxap:ObjectPageSection>
+                    <uxap:ObjectPageSection
+                        titleUppercase="false"
+                        title="2. Background"
+                    >
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection titleUppercase="false">
+                                <uxap:blocks>
+                                    	<TextArea value="" placeholder="[Refer to previous JPC submissions, minutes, outstanding action items etc., decisions or requests from Contracting Group, Authority, JPC, JOC, etc. as relevant]" growing="true" width="100%"/>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                            <uxap:ObjectPageSubSection
+                                title="2.1 Justification for procurement "
+                                titleUppercase="false"
+                            >
+                                <uxap:blocks>
+                                    <TextArea value="" placeholder="[Please include information on why do we need subject GWS. Please provide short but detailed justification] [Ref to law, state procedure etc to be brought in here]" growing="true" width="100%"/>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                            <uxap:ObjectPageSubSection
+                                title="2.2 Description Of Current Arrangement"
+                                titleUppercase="false"
+                            >
+                                <uxap:blocks>
+                                    <Text text="Currently these Services are provided by [Please state] (Supplier) under Contract AP/D/XX/XXXX which is due to expire on XX of XX XXXX. [If the extension of the existing Contract is processed in parallel] : PR XX/XXXX has been raised to extend the current Contract for [Indicate the extension period] to cover the [Please state] period."></Text>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>
 
-            	<uxap:ObjectPageSection titleUppercase="false" title="2. Background">
-				<uxap:subSections>
-					<uxap:ObjectPageSubSection   titleUppercase="false">
-						<uxap:blocks>
-                        <Button text="bbbbbbbbbbbb"></Button>
+                    <uxap:ObjectPageSection
+                        titleUppercase="false"
+                        title="3. Contracting Strategy"
+                    >
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection titleUppercase="false">
+                                <uxap:blocks>
+                                    <Text text="To award a single call off Contract for five (5) years inclusive of two (2) optional extensions of one (1) year each on the basis of a fixed schedule of rates for three (3) years. Value drivers cost, schedule, quality"></Text>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                            <uxap:ObjectPageSubSection
+                                title="3.1 Scope of supplies/work/services "
+                                titleUppercase="false"
+                            >
+                                <uxap:blocks>
+                                    <TextArea value="" placeholder="[Please state the short summary of the scope]" growing="true" width="100%"/>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                            <uxap:ObjectPageSubSection
+                                title="3.2 Compensation, T and C"
+                                titleUppercase="false"
+                            >
+                                <uxap:blocks>
+								<VBox >
+                                   <Text class="sapUiMediumMarginBottom" text="The method of compensation shall be based on the pricing structure presented in Table"></Text>
+								   <Table
+                                        id="Table"
+                                        inset="false"
+                                        mode="MultiSelect"
+                                        fixedLayout="false"
+                                    >
+                                        <columns>
+                                            <Column id="itemColumn1">
+                                                <Text
+                                                    id="Description"
+                                                    text="Description"
+                                                />
+                                            </Column>
+ 
+                                            <Column id="itemColumn2">
+                                                <Text
+                                                    id="Unitrateofmeasurement"
+                                                    text="Unit of measurement"
+                                                />
+                                            </Column>
+                                        </columns>
+ 
+                                        <items>
+                                            <ColumnListItem
+                                                id="_IDGenColumnListItem1"
+                                                vAlign="Middle"
+                                            >
+                                                <cells>
+                                                    <Input value="" />
+                                                    <Select
+                                                        id="Select112"
+                                                        change="onSelectChangeKeyFigure"
+                                                        items=""
+                                                    >
+                                                        <items>
+                                                            <core:Item
+                                                                id="_IDGenItem145"
+                                                                key=""
+                                                                text="Daily rate"
+                                                            />
+                                                            <core:Item
+                                                                id="_IDGenItem125"
+                                                                key=""
+                                                                text="All inclusive daily rate excluding mob/demob costs"
+                                                            />
+                                                            <core:Item
+                                                                id="_IDGenItem123"
+                                                                key=""
+                                                                text="Lump Sum"
+                                                            />
+                                                            <core:Item
+                                                                id="_IDGenItem12345"
+                                                                key=""
+                                                                text="All inclusive lump sum rate per trip (both directions)"
+                                                            />
+                                                            <core:Item
+                                                                id="_IDGenItem45"
+                                                                key=""
+                                                                text="At Operator cost + % mark-up"
+                                                            />
+                                                        </items>
+                                                    </Select>
+                                                </cells>
+                                            </ColumnListItem>
+                                        </items>
+                                    </Table>
+									</VBox>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                            <uxap:ObjectPageSubSection
+                                title="3.3 Currency Selection Rationale"
+                                titleUppercase="false"
+                            >
+                                <uxap:blocks>
+                                    <Text text="Please state and justify the choice"></Text>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>
 
-						</uxap:blocks>
-					</uxap:ObjectPageSubSection>
-					<uxap:ObjectPageSubSection title="2.1 Justification for procurement " titleUppercase="false">
-						<uxap:blocks>
-                        <Button text="aaaa"></Button>
+                    <uxap:ObjectPageSection
+                        titleUppercase="false"
+                        title="4. Tendering Strategy"
+                    >
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection titleUppercase="false">
+                                <uxap:blocks>
+								<VBox >
+                                    		<Text  text="Operator shall perform the Tendering activities in accordance with Article 8 of the JOC Tender Procedure and select the Competitive Tendering Procedure in order to make a recommendation for award of one (1) [or 2 or 3] contract. ."></Text>
 
-						</uxap:blocks>
-					</uxap:ObjectPageSubSection>
-					<uxap:ObjectPageSubSection title="2.2 Description Of Current Arrangement" titleUppercase="false">
-						<uxap:blocks>
-                        <Button text="aaaa"></Button>
+											<Text class="sapUiMediumMarginTopBottom" text="Operator deems it necessary to hold a pre-tender meeting to explain Operator's requirements to the Tenderers. Such pre-tender meeting will be performed in compliance with the provisions of JOC Tender Procedure, Clause 8.5."></Text>
 
-						</uxap:blocks>
-					</uxap:ObjectPageSubSection>
-				</uxap:subSections>
-			</uxap:ObjectPageSection>
+											<Text text="Following the competitive Tender Operator plans to award one [or 2 or 3] Call-Off contract for Provision of [Please state] to the technically and commercially acceptable Tenderer offering the lowest price [or alternatively to the most economically advantageous Tenderer] for a period of five (5) years inclusive of two (2) optional extensions of one (1) year each."></Text>
 
-            <uxap:ObjectPageSection titleUppercase="false" title="3. Contracting Strategy">
-				<uxap:subSections>
-				<uxap:ObjectPageSubSection   titleUppercase="false">
-						<uxap:blocks>
-                        <Button text="bbbbbbbbbbbb"></Button>
+											</VBox>
+											<!-- <FormattedText htmlText=""/> -->
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                            <uxap:ObjectPageSubSection
+                                title="4.1 Tendering Evaluation Plan "
+                                titleUppercase="false"
+                            >
+                                <uxap:blocks>
+                                     <l:VerticalLayout
+                                        id="idVerticalLayout"
+                                        class="sapUiContentPadding"
+                                        width="100%"
+                                    >
+                                        <HBox alignItems="Center">
+                                            <Label
+                                                text="Select TinyMCE version:"
+                                                labelFor="idSelect"
+                                                class="sapUiSmallMarginEnd"
+                                            />
+                                            <Select
+                                                id="idSelect1"
+                                                change="handleSelect"
+                                            >
+                                                <core:Item
+                                                    key="TinyMCE6"
+                                                    text="RichTextEditor with TinyMCE6"
+                                                />
+                                                <core:Item
+                                                    key="TinyMCE5"
+                                                    text="RichTextEditor with TinyMCE5"
+                                                />
+                                            </Select>
+                                        </HBox>
+                                    </l:VerticalLayout>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                            <uxap:ObjectPageSubSection
+                                title="4.2 Tender List"
+                                titleUppercase="false"
+                            >
+                                <uxap:blocks>
+                                    <VBox  >
+									<Text class="sapUiMediumMarginBottom" text="Operator completed market research for provision of subject Services in XXX 20XX and verified with Persons their interest and capabilities. Market Research Report is attached in Appendix 9.4 and Market Research Evaluation Report – in Appendix 9.5.1 Based on the analysis of the market research the Operator proposes the Tender List as detailed in Table 3."></Text>
+									 <Table
+                                                        id="newItemsTable"
+                                                        inset="false"
+                                                        mode="MultiSelect"
+                                                        fixedLayout="false"
+                                                        width="100%"
+                                                        class="customTable"
+                                                    >
+                                                       
+                                                        <columns>
+                                                            <Column
+                                                                id="newItemColumn1"
+                                                                width="7rem"
+                                                            >
+                                                                <Text
+                                                                    id="newItemIdColumnHeader"
+                                                                    text="Name in RU"
+                                                                />
+                                                            </Column>
+ 
+                                                            <Column
+                                                                id="newItemColumnNew"
+                                                                width="10rem"
+                                                            >
+                                                                <Text
+                                                                    id="DescriptionColumnHeader"
+                                                                    text="Name in EN"
+                                                                />
+                                                            </Column>
+ 
+                                                            <Column
+                                                                id="newItemColumn2"
+                                                            >
+                                                                <Text
+                                                                    id="newMaterialNumColumnHeader"
+                                                                    text="Kazakhstan Service"
+                                                                    width="6rem"
+                                                                />
+                                                            </Column>
+ 
+                                                            <Column
+                                                                id="newItemColumn3"
+                                                            >
+                                                                <Text
+                                                                    id="newMaterialDescColumnHeader"
+                                                                    text="Country of origin"
+                                                                    width="4rem"
+                                                                />
+                                                            </Column>
+ 
+                                                            <Column
+                                                                id="newItemColumn7"
+                                                            >
+                                                                <Text
+                                                                    id="newCurrencyColumnHeader"
+                                                                    text="Share (in %) of total number of Kazakhstan citizen employees out of total number of company’s employees"
+                                                                />
+                                                            </Column>
+ 
+                                                            <Column
+                                                                id="newItemColumn8"
+                                                            >
+                                                                <Text
+                                                                    id="newTaxAmountColumnHeader"
+                                                                    text="Share (in%) of Kazakhstan citizen employees’ payroll out of total payroll of company’s employees"
+                                                                />
+                                                            </Column>
+                                                            <Column
+                                                                id="newItemColumn9"
+                                                            >
+                                                                <Text
+                                                                    id="newId1"
+                                                                    text="Total share (in %) of Equity belong to RoK residents in company"
+                                                                />
+                                                            </Column>
+                                                           
+                                                        </columns>
+ 
+                                                        <items>
+                                                            <ColumnListItem
+                                                                id="newItemRow"
+                                                                press="onItemPress"
+                                                                class="hover"
+                                                            >
+                                                                <cells>
+                                                                    <Input
+                                                                        id="_IDGenInput21"
+                                                                        value=""
+                                                                    />
+ 
+                                                                    <Input
+                                                                        id="_IDGenInput22"
+                                                                        value=""
+                                                                    />
+ 
+                                                                    <Input
+                                                                        id="_IDGenInput23"
+                                                                        value=""
+                                                                    />
+ 
+                                                                    <Input
+                                                                        id="_IDGenInput24"
+                                                                        value=""
+                                                                    />
+ 
+                                                                    <Input
+                                                                        value=""
+                                                                    />
+ 
+                                                                    <Input
+                                                                        id="_IDGenInput26"
+                                                                        value=""
+                                                                    />
+ 
+                                                                    <Input
+                                                                        id="_IDGenInput27"
+                                                                        value=""
+                                                                    />
+                                                                </cells>
+                                                            </ColumnListItem>
+                                                        </items>
+                                                    </Table>
 
-						</uxap:blocks>
-					</uxap:ObjectPageSubSection>
-					<uxap:ObjectPageSubSection title="3.1 Scope of supplies/work/services " titleUppercase="false">
+									</VBox>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                            <uxap:ObjectPageSubSection
+                                title="4.3 Indicative Tender"
+                                titleUppercase="false"
+                            >
+                                <uxap:blocks>
+                                    <Table
+                                        items="{jModel>/}"
+                                        id="Table1"
+                                        inset="false"
+                                        mode="MultiSelect"
+                                        fixedLayout="false"
+                                    >
+                                        <columns>
+                                            <Column id="itemColumn11">
+                                                <Text
+                                                    id="Description1"
+                                                    text="Procurement activities"
+                                                />
+                                            </Column>
+ 
+                                            <Column id="itemColumn21">
+                                                <Text
+                                                    id="Unitrateofmeasurement1"
+                                                    text="Duration (days)"
+                                                />
+                                            </Column>
+                                            <Column id="itemColumn211">
+                                                <Text
+                                                    id="Unitrateofmeasurement12"
+                                                    text="Plan date"
+                                                />
+                                            </Column>
+                                        </columns>
+ 
+                                        <items>
+                                            <ColumnListItem
+                                                id="_IDGenColumnListItem11"
+                                                vAlign="Middle"
+                                            >
+                                                <cells>
+                                                    <Text text="{jModel>procurementActv}" />
+                                                    <Text text="{jModel>duration}" />
+                                                    <DatePicker value="" />
+                                                </cells>
+                                            </ColumnListItem>
+                                        </items>
+                                    </Table>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>
 
-						<uxap:blocks>
-                        <Button text="aaaa"></Button>
+                    <uxap:ObjectPageSection
+                        titleUppercase="false"
+                        title="5. HSE"
+                    >
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection titleUppercase="false">
+                                <uxap:blocks>
+                                   <VBox >
+								   <Text class="sapUiMediumMarginBottom" text="The Tenderer will be required to comply fully with all the Operator HSE policies and procedures."></Text>
+								   <Text text="The Operator has determined the provision of Services as having a [Please state] risk exposure and shall be subject to the provisions of the Operator HSE Supplier Management Strategy and performance monitoring"></Text>
+								   
+								   
+								   </VBox>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>
 
-						</uxap:blocks>
-					</uxap:ObjectPageSubSection>
-					<uxap:ObjectPageSubSection title="3.2 Compensation, T and C" titleUppercase="false">
-						<uxap:blocks>
-                        <Button text="aaaa"></Button>
+                    <uxap:ObjectPageSection
+                        titleUppercase="false"
+                        title="6. Local Content"
+                    >
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection titleUppercase="false">
+                                <uxap:blocks>
+                                    <Text text="Tenderer shall provide as part of its Tender responses to Operator’s Local Content Questionnaire. The selected Supplier shall comply with all Operator Local Content requirements and policies and report Local Content in accordance with RoK Law.
 
-						</uxap:blocks>
-					</uxap:ObjectPageSubSection>
-                    <uxap:ObjectPageSubSection title="3.3 Currency Selection Rationale" titleUppercase="false">
-						<uxap:blocks>
-                        <Button text="aaaa"></Button>
+Ownership Employment Investment in country Any other LC elements Technology transfer, partnership etc"></Text>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>
 
-						</uxap:blocks>
-					</uxap:ObjectPageSubSection>
-				</uxap:subSections>
-			</uxap:ObjectPageSection>
+                    <uxap:ObjectPageSection
+                        titleUppercase="false"
+                        title="7. Operator Internal estimate of Cost and Quantity Estimation"
+                    >
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection titleUppercase="false">
+                                <uxap:blocks>
+                                    <!-- <Button text="bbbbbbbbbbbb" /> -->
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                            <uxap:ObjectPageSubSection
+                                title="7.1 Estimate Basis and Assumption "
+                                titleUppercase="false"
+                            >
+                                <uxap:blocks>
+                                    <Text text="USD XXXXX. presented in Table 5. The detailed cost estimate is presented in Appendix 9.1."></Text>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>
 
-            <uxap:ObjectPageSection titleUppercase="false" title="4. Tendering Strategy">
-				<uxap:subSections>
-				<uxap:ObjectPageSubSection   titleUppercase="false">
-						<uxap:blocks>
-                        <Button text="bbbbbbbbbbbb"></Button>
-
-						</uxap:blocks>
-					</uxap:ObjectPageSubSection>
-					<uxap:ObjectPageSubSection title="4.1 Tendering Evaluation Plan " titleUppercase="false">
-						<uxap:blocks>
-                        <Button text="aaaa"></Button>
-
-						</uxap:blocks>
-					</uxap:ObjectPageSubSection>
-					<uxap:ObjectPageSubSection title="4.2 Tender List" titleUppercase="false">
-						<uxap:blocks>
-                        <Button text="aaaa"></Button>
-
-						</uxap:blocks>
-					</uxap:ObjectPageSubSection>
-                    <uxap:ObjectPageSubSection title="4.3 Indicative Tender" titleUppercase="false">
-						<uxap:blocks>
-                        <Button text="aaaa"></Button>
-
-						</uxap:blocks>
-					</uxap:ObjectPageSubSection>
-				</uxap:subSections>
-			</uxap:ObjectPageSection>
-
-            <uxap:ObjectPageSection titleUppercase="false" title="5. HSE">
-            <uxap:subSections>
-					<uxap:ObjectPageSubSection titleUppercase="false">
-						<uxap:blocks>
-                        <Button text="aaaa"></Button>
-						</uxap:blocks>
-					</uxap:ObjectPageSubSection>
-				</uxap:subSections>
-			</uxap:ObjectPageSection>
-
-            <uxap:ObjectPageSection titleUppercase="false" title="6. Local Content">
-            <uxap:subSections>
-					<uxap:ObjectPageSubSection titleUppercase="false">
-						<uxap:blocks>
-                        <Button text="aaaa"></Button>
-						</uxap:blocks>
-					</uxap:ObjectPageSubSection>
-				</uxap:subSections>
-			</uxap:ObjectPageSection>
-
-            <uxap:ObjectPageSection titleUppercase="false" title="7. Operator Internal estimate of Cost and Quantity Estimation">
-				<uxap:subSections>
-				<uxap:ObjectPageSubSection   titleUppercase="false">
-						<uxap:blocks>
-                        <Button text="bbbbbbbbbbbb"></Button>
-
-						</uxap:blocks>
-					</uxap:ObjectPageSubSection>
-					<uxap:ObjectPageSubSection title="7.1 Estimate Basis and Assumption " titleUppercase="false">
-						<uxap:blocks>
-                        <Button text="aaaa"></Button>
-
-						</uxap:blocks>
-					</uxap:ObjectPageSubSection>
-                    
-					
-				</uxap:subSections>
-			</uxap:ObjectPageSection>
-
-             <!-- <uxap:ObjectPageSection titleUppercase="false" title="7. Operator Internal estimate of Cost and Quantity Estimation">
+                    <!-- <uxap:ObjectPageSection titleUppercase="false" title="7. Operator Internal estimate of Cost and Quantity Estimation">
 				<uxap:subSections>
 					<uxap:ObjectPageSubSection title="7.1 Estimate Basis and Assumption " titleUppercase="false">
 						<uxap:blocks>
@@ -161,35 +537,39 @@
 				</uxap:subSections>
 			</uxap:ObjectPageSection> -->
 
-            <uxap:ObjectPageSection titleUppercase="false" title="8. Conclusion">
-            <uxap:subSections>
-					<uxap:ObjectPageSubSection titleUppercase="false">
-						<uxap:blocks>
-                        <Button text="aaaa"></Button>
-						</uxap:blocks>
-					</uxap:ObjectPageSubSection>
-				</uxap:subSections>
-			</uxap:ObjectPageSection>
+                    <uxap:ObjectPageSection
+                        titleUppercase="false"
+                        title="8. Conclusion"
+                    >
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection titleUppercase="false">
+                                <uxap:blocks>
+                                   <Text text="To request JPC approval for Contract Strategy (CS), Tender List (TL) and Tender Evaluation Plan (TEP) for Provision of [Please state] (Services) for a period of five (5) years inclusive of two (2) optional extensions of one (1) year each and for an estimated value of [Please state] as described herein."></Text>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>
 
-            <uxap:ObjectPageSection titleUppercase="false" title="9. Apendices">
-            <uxap:subSections>
-					<uxap:ObjectPageSubSection titleUppercase="false">
-						<uxap:blocks>
-                        <Button text="aaaa"></Button>
-						</uxap:blocks>
-					</uxap:ObjectPageSubSection>
-				</uxap:subSections>
-			</uxap:ObjectPageSection>
-
-			
-
-			
-
-
-		</uxap:sections>
-
-	</uxap:ObjectPageLayout>
-
+                    <uxap:ObjectPageSection
+                        titleUppercase="false"
+                        title="9. Apendices"
+                    >
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection titleUppercase="false">
+                                <uxap:blocks>
+                                    <Button text="aaaa" />
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>
+                </uxap:sections>
+            </uxap:ObjectPageLayout>
         </content>
+        <footer>
+        <Toolbar >
+        <OverflowToolbar ><Button text="aaa" press="www"></Button></OverflowToolbar>
+        
+        </Toolbar>
+        </footer>
     </Page>
 </mvc:View>
