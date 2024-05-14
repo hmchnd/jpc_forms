@@ -265,7 +265,39 @@ sap.ui.define([
 
                     oModel.setProperty("/field1", aData); // Update the model
                 }
-            }
+            },
+            onSelectChangeKeyFigure1 : function(oEvent){
+                debugger
+                // let currency = oEvent.getParameter("selectedItem").getText();
+                let risk = this.getView().byId("SelectRisk").getSelectedItem().getText();
+                console.log(risk)
+                let hsseText = this.byId("hsseText");
+                let newhsseText="The Operator has determined the provision of Services as having a " + risk + " risk exposure and shall be subject to the provisions of the Operator HSE Supplier Management Strategy and performance monitoring"
+                hsseText.setText(newhsseText);
+            },
+            onSupplierNumberLiveChange: function (oEvent) {
+                debugger
+                var supplier_Value = this.getView().byId("supplierNumberInput").getValue();;
+                var contract_Value = this.getView().byId("contractNumberInput").getValue();
+                let date =this.getView().byId("expDate").getDateValue();
+
+    
+                var oDescriptionText = this.byId("desc");
+    
+                var sNewText = "Currently these Services are provided by " + supplier_Value + " (Supplier) under Contract " + contract_Value + " which is due to expire on " + date +" [If the extension of the existing Contract is processed in parallel] : PR XX/XXXX has been raised to extend the current Contract for [Indicate the extension period] to cover the [Please state] period.";
+    
+                oDescriptionText.setText(sNewText);
+            },
+            onSelectChangeKeyCurrency: function(oEvent){
+                debugger
+                // let currency = oEvent.getParameter("selectedItem").getText();
+                let currency = this.getView().byId("Select122d212").getSelectedItem().getText();
+                console.log(currency)
+                let currencyText = this.byId("currency");
+                let newCurrencyText=currency;
+                currencyText.setText(newCurrencyText);
+            },
+           
 
 
         });

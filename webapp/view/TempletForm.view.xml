@@ -76,17 +76,64 @@
                                             <Label text="SERVICES" />
                                             <Input value="" />
                                             <Label text="HSSE RISK" />
-                                            <Input value="" />
+                                            <Select
+                                                            id="SelectRisk"
+                                                            change="onSelectChangeKeyFigure1"
+                                                        >
+                                                            <items>
+                                                                <core:Item
+                                                                    id="_IDGenItemsss145"
+                                                                    key="Low"
+                                                                    text="Low"
+                                                                />
+                                                                  <core:Item
+                                                                    id="_IDGenItemssdds145"
+                                                                    key="Medium"
+                                                                    text="Medium"
+                                                                />
+                                                                  <core:Item
+                                                                    id="_IDGendItemsss145"
+                                                                    key="High"
+                                                                    text="High"
+                                                                />
+                                                               
+                                                            </items>
+                                                        </Select>
                                             <Label text="CONTRACT NUMBER" />
-                                            <Input value="" />
-                                            <Label text="SUPPLIER NUMBER" />
-                                            <Input value="" />
+                                            <Input id="contractNumberInput" liveChange="onSupplierNumberLiveChange" />
+                                           
+                                            <Label text="SUPPLIER NUMBER"  />
+                                            <Input id="supplierNumberInput" liveChange="onSupplierNumberLiveChange" />
                                             <Label
                                                 text="CONTRACT EXPIRY DATE"
                                             />
-                                            <Input value="" />
+                                            <DatePicker id="expDate" change="onSupplierNumberLiveChange"></DatePicker>
                                             <Label text="CURRENCY" />
-                                            <Input value="" />
+                                            <Select
+                                                            id="Select122d212"
+                                                            change="onSelectChangeKeyCurrency"
+                                                            
+
+                                                        >
+                                                            <items>
+                                                                <core:Item
+                                                                    id="_IDGdenItemsss145"
+                                                                    key=""
+                                                                    text="INR"
+                                                                />
+                                                                  <core:Item
+                                                                    id="_IDGenIdtemssdds145"
+                                                                    key=""
+                                                                    text="USD"
+                                                                />
+                                                                  <core:Item
+                                                                    id="_IDGendIdtemsss145"
+                                                                    key=""
+                                                                    text="EUR"
+                                                                />
+                                                               
+                                                            </items>
+                                                        </Select>
                                             <Label
                                                 text="LOCAL CONTENT POSITION"
                                             />
@@ -146,7 +193,7 @@
                                 titleUppercase="false"
                             >
                                 <uxap:blocks>
-                                    <Text
+                                    <Text id="desc"
                                         text="Currently these Services are provided by [Please state] (Supplier) under Contract AP/D/XX/XXXX which is due to expire on XX of XX XXXX. [If the extension of the existing Contract is processed in parallel] : PR XX/XXXX has been raised to extend the current Contract for [Indicate the extension period] to cover the [Please state] period."
                                     />
                                 </uxap:blocks>
@@ -279,7 +326,7 @@
                                 titleUppercase="false"
                             >
                                 <uxap:blocks>
-                                    <Text
+                                    <Text id="currency"
                                         text="Please state and justify the choice"
                                     />
                                 </uxap:blocks>
@@ -602,7 +649,7 @@
                                             class="sapUiMediumMarginBottom"
                                             text="The Tenderer will be required to comply fully with all the Operator HSE policies and procedures."
                                         />
-                                        <Text
+                                        <Text id="hsseText"
                                             text="The Operator has determined the provision of Services as having a [Please state] risk exposure and shall be subject to the provisions of the Operator HSE Supplier Management Strategy and performance monitoring"
                                         />
                                     </VBox>
