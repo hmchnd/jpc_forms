@@ -62,7 +62,7 @@
                                             <Label
                                                 text="ESTIMATED CONTRACT VALUE:"
                                             />
-                                            <Input value="" />
+                                            <Input id="contractvalue" value="" liveChange="onSupplierNumberLiveChange" />
                                             <Label
                                                 text="PROPOSED CONTRACT DURATION:"
                                             />
@@ -119,12 +119,12 @@
                                                                 <core:Item
                                                                     id="_IDGdenItemsss145"
                                                                     key=""
-                                                                    text="INR"
+                                                                    text="USD"
                                                                 />
                                                                   <core:Item
                                                                     id="_IDGenIdtemssdds145"
                                                                     key=""
-                                                                    text="USD"
+                                                                    text="INR"
                                                                 />
                                                                   <core:Item
                                                                     id="_IDGendIdtemsss145"
@@ -690,7 +690,7 @@ Ownership Employment Investment in country Any other LC elements Technology tran
                                 titleUppercase="false"
                             >
                                 <uxap:blocks>
-                                    <Text
+                                    <Text id="estimateBasis"
                                         text="USD XXXXX. presented in Table 5. The detailed cost estimate is presented in Appendix 9.1."
                                     />
                                 </uxap:blocks>

@@ -278,15 +278,23 @@ sap.ui.define([
             onSupplierNumberLiveChange: function (oEvent) {
                 debugger
                 var supplier_Value = this.getView().byId("supplierNumberInput").getValue();;
-                var contract_Value = this.getView().byId("contractNumberInput").getValue();
+                var contractNO_Value = this.getView().byId("contractNumberInput").getValue();
+                let contract_value = this.getView().byId("contractvalue").getValue();
+                let currency = this.getView().byId("Select122d212").getSelectedItem().getText();
+
+
                 let date =this.getView().byId("expDate").getDateValue();
 
-    
                 var oDescriptionText = this.byId("desc");
+                let estimatebasic=this.getView().byId("estimateBasis")
+
     
-                var sNewText = "Currently these Services are provided by " + supplier_Value + " (Supplier) under Contract " + contract_Value + " which is due to expire on " + date +" [If the extension of the existing Contract is processed in parallel] : PR XX/XXXX has been raised to extend the current Contract for [Indicate the extension period] to cover the [Please state] period.";
-    
+                var sNewText = "Currently these Services are provided by " + supplier_Value + " (Supplier) under Contract " + contractNO_Value + " which is due to expire on " + date +" [If the extension of the existing Contract is processed in parallel] : PR XX/XXXX has been raised to extend the current Contract for [Indicate the extension period] to cover the [Please state] period.";
+                let estimateText= currency + " " + contract_value + " presented in Table 5. The detailed cost estimate is presented in Appendix 9.1."
+                
                 oDescriptionText.setText(sNewText);
+                estimatebasic.setText(estimateText);
+
             },
             onSelectChangeKeyCurrency: function(oEvent){
                 debugger
@@ -296,6 +304,13 @@ sap.ui.define([
                 let currencyText = this.byId("currency");
                 let newCurrencyText=currency;
                 currencyText.setText(newCurrencyText);
+                this.onSupplierNumberLiveChange();
+
+                
+
+
+
+                
             },
            
 
