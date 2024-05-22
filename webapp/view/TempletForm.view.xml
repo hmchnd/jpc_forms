@@ -147,13 +147,14 @@
 
                     <uxap:ObjectPageSection
                         titleUppercase="false"
-                        title="1. Purpose"
+                        title="Purpose"
                     >
                         <uxap:subSections>
                             <uxap:ObjectPageSubSection titleUppercase="false">
                                 <uxap:blocks>
-                                    <Text
-                                        text="To request JPC approval for the Contract Strategy (CS), Tender List (TL) and Tender Evaluation Plan (TEP) for the Provision of [Please state] (Services) for a period of five (5) years inclusive of two (2) optional extensions of one (1) year each with an estimated value of [Please state] as described herein."
+                                    <TextArea growing="true"
+                                        width="100%"
+                                        placeholder="To request JPC approval for the Contract Strategy (CS), Tender List (TL) and Tender Evaluation Plan (TEP) for the Provision of [Please state] (Services) for a period of five (5) years inclusive of two (2) optional extensions of one (1) year each with an estimated value of [Please state] as described herein."
                                     />
                                 </uxap:blocks>
                             </uxap:ObjectPageSubSection>
@@ -162,7 +163,7 @@
 
                     <uxap:ObjectPageSection
                         titleUppercase="false"
-                        title="2. Background"
+                        title="Background"
                     >
                         <uxap:subSections>
                             <uxap:ObjectPageSubSection titleUppercase="false">
@@ -176,7 +177,7 @@
                                 </uxap:blocks>
                             </uxap:ObjectPageSubSection>
                             <uxap:ObjectPageSubSection
-                                title="2.1 Justification for procurement "
+                                title="Justification for procurement "
                                 titleUppercase="false"
                             >
                                 <uxap:blocks>
@@ -193,9 +194,9 @@
                                 titleUppercase="false"
                             >
                                 <uxap:blocks>
-                                    <Text id="desc"
+                                    <!-- <Text id="desc"
                                         text="Currently these Services are provided by [Please state] (Supplier) under Contract AP/D/XX/XXXX which is due to expire on XX of XX XXXX. [If the extension of the existing Contract is processed in parallel] : PR XX/XXXX has been raised to extend the current Contract for [Indicate the extension period] to cover the [Please state] period."
-                                    />
+                                    /> -->
                                 </uxap:blocks>
                             </uxap:ObjectPageSubSection>
                         </uxap:subSections>
@@ -208,9 +209,9 @@
                         <uxap:subSections>
                             <uxap:ObjectPageSubSection titleUppercase="false">
                                 <uxap:blocks>
-                                    <Text
+                                    <!-- <Text
                                         text="To award a single call off Contract for five (5) years inclusive of two (2) optional extensions of one (1) year each on the basis of a fixed schedule of rates for three (3) years. Value drivers cost, schedule, quality"
-                                    />
+                                    /> -->
                                 </uxap:blocks>
                             </uxap:ObjectPageSubSection>
                             <uxap:ObjectPageSubSection
@@ -218,16 +219,16 @@
                                 titleUppercase="false"
                             >
                                 <uxap:blocks>
-                                    <TextArea
+                                    <!-- <TextArea
                                         value=""
                                         placeholder="[Please state the short summary of the scope]"
                                         growing="true"
                                         width="100%"
-                                    />
+                                    /> -->
                                 </uxap:blocks>
                             </uxap:ObjectPageSubSection>
                             <uxap:ObjectPageSubSection
-                                title="3.2 Compensation, T and C"
+                                title=" Compensation, T and C"
                                 titleUppercase="false"
                             >
                                 <uxap:blocks>
@@ -326,9 +327,9 @@
                                 titleUppercase="false"
                             >
                                 <uxap:blocks>
-                                    <Text id="currency"
+                                    <!-- <Text id="currency"
                                         text="Please state and justify the choice"
-                                    />
+                                    /> -->
                                 </uxap:blocks>
                             </uxap:ObjectPageSubSection>
                         </uxap:subSections>
@@ -336,12 +337,12 @@
 
                     <uxap:ObjectPageSection
                         titleUppercase="false"
-                        title="4. Tendering Strategy"
+                        title="Tendering Strategy"
                     >
                         <uxap:subSections>
                             <uxap:ObjectPageSubSection titleUppercase="false">
                                 <uxap:blocks>
-                                    <VBox>
+                                    <!-- <VBox>
                                         <Text
                                             text="Operator shall perform the Tendering activities in accordance with Article 8 of the JOC Tender Procedure and select the Competitive Tendering Procedure in order to make a recommendation for award of one (1) [or 2 or 3] contract. ."
                                         />
@@ -354,7 +355,7 @@
                                         <Text
                                             text="Following the competitive Tender Operator plans to award one [or 2 or 3] Call-Off contract for Provision of [Please state] to the technically and commercially acceptable Tenderer offering the lowest price [or alternatively to the most economically advantageous Tenderer] for a period of five (5) years inclusive of two (2) optional extensions of one (1) year each."
                                         />
-                                    </VBox>
+                                    </VBox> -->
                                     <!-- <FormattedText htmlText=""/> -->
                                 </uxap:blocks>
                             </uxap:ObjectPageSubSection>
@@ -363,7 +364,7 @@
                                 titleUppercase="false"
                             >
                                 <uxap:blocks>
-                                    <l:VerticalLayout
+                                    <!-- <l:VerticalLayout
                                         id="idVerticalLayout"
                                         class="sapUiContentPadding"
                                         width="100%"
@@ -388,7 +389,7 @@
                                                 />
                                             </Select>
                                         </HBox>
-                                    </l:VerticalLayout>
+                                    </l:VerticalLayout> -->
                                 </uxap:blocks>
                             </uxap:ObjectPageSubSection>
 
@@ -397,7 +398,7 @@
                                 titleUppercase="false"
                             >
                                 <uxap:blocks>
-                                    <VBox>
+                                    <!-- <VBox>
                                         <Text
                                            class="center"
                                             text="Submission to JPC-XXX"
@@ -456,12 +457,12 @@
                                                 </ColumnListItem>
                                             </items>
                                         </Table>
-                                    </VBox>
+                                    </VBox> -->
                                 </uxap:blocks>
                             </uxap:ObjectPageSubSection>
 
                             <uxap:ObjectPageSubSection
-                                title="4.2 Tender List"
+                                title="Tender List"
                                 titleUppercase="false"
                             >
                                 <uxap:blocks>
@@ -478,6 +479,19 @@
                                             width="100%"
                                             class="customTable"
                                         >
+                                        <headerToolbar>
+                                                <Toolbar>
+                                                    <ToolbarSpacer />
+                                                    <Button
+                                                        text="Add"
+                                                        press="onAdd"
+                                                    />
+                                                    <Button
+                                                        text="Delete"
+                                                        press="onDelete"
+                                                    />
+                                                </Toolbar>
+                                            </headerToolbar>
                                             <columns>
                                                 <Column
                                                     id="newItemColumn1"
@@ -582,7 +596,7 @@
                                 </uxap:blocks>
                             </uxap:ObjectPageSubSection>
                             <uxap:ObjectPageSubSection
-                                title="4.3 Indicative Tender"
+                                title="Indicative Tender"
                                 titleUppercase="false"
                             >
                                 <uxap:blocks>
@@ -644,7 +658,7 @@
                         <uxap:subSections>
                             <uxap:ObjectPageSubSection titleUppercase="false">
                                 <uxap:blocks>
-                                    <VBox>
+                                    <!-- <VBox>
                                         <Text
                                             class="sapUiMediumMarginBottom"
                                             text="The Tenderer will be required to comply fully with all the Operator HSE policies and procedures."
@@ -652,7 +666,7 @@
                                         <Text id="hsseText"
                                             text="The Operator has determined the provision of Services as having a [Please state] risk exposure and shall be subject to the provisions of the Operator HSE Supplier Management Strategy and performance monitoring"
                                         />
-                                    </VBox>
+                                    </VBox> -->
                                 </uxap:blocks>
                             </uxap:ObjectPageSubSection>
                         </uxap:subSections>
@@ -665,11 +679,11 @@
                         <uxap:subSections>
                             <uxap:ObjectPageSubSection titleUppercase="false">
                                 <uxap:blocks>
-                                    <Text
+                                    <!-- <Text
                                         text="Tenderer shall provide as part of its Tender responses to Operator’s Local Content Questionnaire. The selected Supplier shall comply with all Operator Local Content requirements and policies and report Local Content in accordance with RoK Law.
 
 Ownership Employment Investment in country Any other LC elements Technology transfer, partnership etc"
-                                    />
+                                    /> -->
                                 </uxap:blocks>
                             </uxap:ObjectPageSubSection>
                         </uxap:subSections>
@@ -690,9 +704,9 @@ Ownership Employment Investment in country Any other LC elements Technology tran
                                 titleUppercase="false"
                             >
                                 <uxap:blocks>
-                                    <Text id="estimateBasis"
+                                    <!-- <Text id="estimateBasis"
                                         text="USD XXXXX. presented in Table 5. The detailed cost estimate is presented in Appendix 9.1."
-                                    />
+                                    /> -->
                                 </uxap:blocks>
                             </uxap:ObjectPageSubSection>
                         </uxap:subSections>
@@ -710,7 +724,7 @@ Ownership Employment Investment in country Any other LC elements Technology tran
 				</uxap:subSections>
 			</uxap:ObjectPageSection> -->
 
-                    <uxap:ObjectPageSection
+                    <!-- <uxap:ObjectPageSection
                         titleUppercase="false"
                         title="8. Conclusion"
                     >
@@ -723,9 +737,9 @@ Ownership Employment Investment in country Any other LC elements Technology tran
                                 </uxap:blocks>
                             </uxap:ObjectPageSubSection>
                         </uxap:subSections>
-                    </uxap:ObjectPageSection>
+                    </uxap:ObjectPageSection> -->
 
-                    <uxap:ObjectPageSection
+                    <!-- <uxap:ObjectPageSection
                         titleUppercase="false"
                         title="9. Apendices"
                     >
@@ -736,7 +750,7 @@ Ownership Employment Investment in country Any other LC elements Technology tran
                                 </uxap:blocks>
                             </uxap:ObjectPageSubSection>
                         </uxap:subSections>
-                    </uxap:ObjectPageSection>
+                    </uxap:ObjectPageSection> -->
                 </uxap:sections>
             </uxap:ObjectPageLayout>
         </content>
