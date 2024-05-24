@@ -48,17 +48,55 @@
                                     >
                                         <f:content>
                                             <Label text="REQUISITION NO" />
-                                            <Input value="" />
+                                            <Input value="" showValueHelp="true" valueHelpRequest="onRequisitionHelp"/>
                                             <Label text="DATE OF APPROVAL." />
-                                            <Input value="" />
+                                            <DatePicker ></DatePicker>
                                             <Label text="ICP NO:" />
                                             <Input value="" />
                                             <Label text="TENDERING STRATEGY:" />
-                                            <Input value="" />
+                                            <Select
+                                                            change="onSelectChangeKeyFigure1"
+                                                        >
+                                                            <items>
+                                                                <core:Item
+                                                                    id="_IDGenItemsssd145"
+                                                                    key=""
+                                                                    text="Tender 1"
+                                                                />
+                                                                  <core:Item
+                                                                    id="_IDGenItedmssdds145"
+                                                                    key="Tender 2"
+                                                                    text="Tender 2"
+                                                                />
+                                                                  <core:Item
+                                                                    id="_IDGendItemesss145"
+                                                                    key="Tender 3"
+                                                                    text="Tender 3"
+                                                                />
+                                                               
+                                                            </items>
+                                                        </Select>
                                             <Label text="CONTRACT TITLE:" />
                                             <Input value="" />
                                             <Label text="CONTRACT TYPE:" />
-                                            <Input value="" />
+                                            <Select
+                                                            change="onSelectChangeKeyFigure1"
+                                                        >
+                                                            <items>
+                                                                <core:Item
+                                                                    id="_IDGenItsemsssd145"
+                                                                    key="JPC"
+                                                                    text="JPC"
+                                                                />
+                                                                  <core:Item
+                                                                    id="_IDGenItdedmssdds145"
+                                                                    key="JOC"
+                                                                    text="JOC"
+                                                                />
+                                                                 
+                                                               
+                                                            </items>
+                                                        </Select>
                                             <Label
                                                 text="ESTIMATED CONTRACT VALUE:"
                                             />
@@ -74,7 +112,7 @@
                                             <Label text="TOTAL DURATION:" />
                                             <Input value="" />
                                             <Label text="SERVICES" />
-                                            <Input value="" />
+                                            <Input value="" showValueHelp="true" valueHelpRequest="onServiceHelp"/>
                                             <Label text="HSSE RISK" />
                                             <Select
                                                             id="SelectRisk"
@@ -100,10 +138,10 @@
                                                             </items>
                                                         </Select>
                                             <Label text="CONTRACT NUMBER" />
-                                            <Input id="contractNumberInput" liveChange="onSupplierNumberLiveChange" />
+                                            <Input id="contractNumberInput" liveChange="onSupplierNumberLiveChange" showValueHelp="true" valueHelpRequest="onContractHelp" />
                                            
                                             <Label text="SUPPLIER NUMBER"  />
-                                            <Input id="supplierNumberInput" liveChange="onSupplierNumberLiveChange" />
+                                            <Input id="supplierNumberInput" liveChange="onSupplierNumberLiveChange" showValueHelp="true" valueHelpRequest="onSupplierHelp" />
                                             <Label
                                                 text="CONTRACT EXPIRY DATE"
                                             />

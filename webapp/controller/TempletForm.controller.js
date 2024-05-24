@@ -70,6 +70,8 @@ sap.ui.define([
                 ];
 
 
+
+
                 let data2 = {
                     "field1": [
                         {
@@ -114,6 +116,31 @@ sap.ui.define([
 
                     },
                 ]
+
+                let suppllier = [{ supNo: "SUP1232345" },
+                { supNo: "SUP123235" },
+                { supNo: "SUP1223345" }]
+                let supplier = new JSONModel(suppllier);
+                this.getView().setModel(supplier, "sup")
+
+
+                let contractData = [{ conNo: "CON20001" },
+                { conNo: "CON20002" },
+                { conNo: "CON20301" }]
+                let contract = new JSONModel(contractData);
+                this.getView().setModel(contract, "con")
+
+                let serviceData = [{ service: "Service 1" },
+                { service: "Service 2" },
+                { service: "Service 3" }]
+                let service = new JSONModel(serviceData);
+                this.getView().setModel(service, "service")
+
+                let reqData = [{ req: "REQ001" },
+                { req: "REQ002" },
+                { req: "REQ003" }]
+                let req = new JSONModel(reqData);
+                this.getView().setModel(req, "req")
 
                 let jModel = new JSONModel(data);
                 this.getView().setModel(jModel, "jModel");
@@ -194,16 +221,16 @@ sap.ui.define([
                             value: sHtmlValue,
                             editable: false,
                             enabled: false,
-                            showGroupClipboard:false,
+                            showGroupClipboard: false,
                             showGroupStructure: false,
-                            showGroupTextAlign:false,
-                            showGroupUndo:false,
-                            useLegacyTheme:false,
-                            showGroupInsert:false,
-                            showGroupFontStyle:false,
-                            showGroupInsert:false,
-                            showGroupLink:false,
-                            useLegacyTheme:false,
+                            showGroupTextAlign: false,
+                            showGroupUndo: false,
+                            useLegacyTheme: false,
+                            showGroupInsert: false,
+                            showGroupFontStyle: false,
+                            showGroupInsert: false,
+                            showGroupLink: false,
+                            useLegacyTheme: false,
 
 
                             // ready: function () {
@@ -266,13 +293,13 @@ sap.ui.define([
                     oModel.setProperty("/field1", aData); // Update the model
                 }
             },
-            onSelectChangeKeyFigure1 : function(oEvent){
+            onSelectChangeKeyFigure1: function (oEvent) {
                 debugger
                 // let currency = oEvent.getParameter("selectedItem").getText();
                 let risk = this.getView().byId("SelectRisk").getSelectedItem().getText();
                 console.log(risk)
                 let hsseText = this.byId("hsseText");
-                let newhsseText="The Operator has determined the provision of Services as having a " + risk + " risk exposure and shall be subject to the provisions of the Operator HSE Supplier Management Strategy and performance monitoring"
+                let newhsseText = "The Operator has determined the provision of Services as having a " + risk + " risk exposure and shall be subject to the provisions of the Operator HSE Supplier Management Strategy and performance monitoring"
                 hsseText.setText(newhsseText);
             },
             onSupplierNumberLiveChange: function (oEvent) {
@@ -283,36 +310,112 @@ sap.ui.define([
                 let currency = this.getView().byId("Select122d212").getSelectedItem().getText();
 
 
-                let date =this.getView().byId("expDate").getDateValue();
+                let date = this.getView().byId("expDate").getDateValue();
 
                 var oDescriptionText = this.byId("desc");
-                let estimatebasic=this.getView().byId("estimateBasis")
+                let estimatebasic = this.getView().byId("estimateBasis")
 
-    
-                var sNewText = "Currently these Services are provided by " + supplier_Value + " (Supplier) under Contract " + contractNO_Value + " which is due to expire on " + date +" [If the extension of the existing Contract is processed in parallel] : PR XX/XXXX has been raised to extend the current Contract for [Indicate the extension period] to cover the [Please state] period.";
-                let estimateText= currency + " " + contract_value + " presented in Table 5. The detailed cost estimate is presented in Appendix 9.1."
-                
+
+                var sNewText = "Currently these Services are provided by " + supplier_Value + " (Supplier) under Contract " + contractNO_Value + " which is due to expire on " + date + " [If the extension of the existing Contract is processed in parallel] : PR XX/XXXX has been raised to extend the current Contract for [Indicate the extension period] to cover the [Please state] period.";
+                let estimateText = currency + " " + contract_value + " presented in Table 5. The detailed cost estimate is presented in Appendix 9.1."
+
                 oDescriptionText.setText(sNewText);
                 estimatebasic.setText(estimateText);
 
             },
-            onSelectChangeKeyCurrency: function(oEvent){
+            onSelectChangeKeyCurrency: function (oEvent) {
                 debugger
                 // let currency = oEvent.getParameter("selectedItem").getText();
                 let currency = this.getView().byId("Select122d212").getSelectedItem().getText();
                 console.log(currency)
                 let currencyText = this.byId("currency");
-                let newCurrencyText=currency;
+                let newCurrencyText = currency;
                 currencyText.setText(newCurrencyText);
                 this.onSupplierNumberLiveChange();
 
-                
 
 
 
-                
+
+
             },
-           
+            onSupplierHelp: function () {
+                if (!this.Supplier) {
+                    Fragment.load({
+                        id: this.getView().getId(),
+                        name: "com.sap.jpcsubmissionforms.view.fragment.Supplier",
+                        controller: this
+                    }).then(oDialog => {
+                        this.Supplier = oDialog
+                        this.getView().addDependent(oDialog)
+                        oDialog.open()
+                    })
+                } else {
+                    this.Supplier.open()
+                }
+            },
+            onCancelSupplier: function () {
+                this.Supplier.close();
+
+            },
+            onContractHelp: function () {
+                if (!this.contract) {
+                    Fragment.load({
+                        id: this.getView().getId(),
+                        name: "com.sap.jpcsubmissionforms.view.fragment.Contract",
+                        controller: this
+                    }).then(oDialog => {
+                        this.contract = oDialog
+                        this.getView().addDependent(oDialog)
+                        oDialog.open()
+                    })
+                } else {
+                    this.contract.open()
+                }
+            },
+            onCancelContract: function () {
+                this.contract.close();
+
+            },
+            onRequisitionHelp: function () {
+                if (!this.req) {
+                    Fragment.load({
+                        id: this.getView().getId(),
+                        name: "com.sap.jpcsubmissionforms.view.fragment.RequisitionNoF4",
+                        controller: this
+                    }).then(oDialog => {
+                        this.req = oDialog
+                        this.getView().addDependent(oDialog)
+                        oDialog.open()
+                    })
+                } else {
+                    this.req.open()
+                }
+            },
+            onCancelreq: function () {
+                this.req.close();
+
+            },
+            onServiceHelp: function () {
+                if (!this.service) {
+                    Fragment.load({
+                        id: this.getView().getId(),
+                        name: "com.sap.jpcsubmissionforms.view.fragment.ServiceF4",
+                        controller: this
+                    }).then(oDialog => {
+                        this.service = oDialog
+                        this.getView().addDependent(oDialog)
+                        oDialog.open()
+                    })
+                } else {
+                    this.service.open()
+                }
+            },
+            onCancelservice: function () {
+                this.service.close();
+
+            },
+
 
 
         });

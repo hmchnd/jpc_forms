@@ -1,0 +1,36 @@
+<core:FragmentDefinition
+    xmlns:upload="sap.m.upload"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+   
+>
+    <Dialog
+        title="Suppliers "
+        contentWidth="400px"
+    >
+        <content>
+         <List
+                items="{sup>/}"
+                headerText=""
+                growing="true"
+                growingThreshold="4"
+                growingScrollToLoad="false"
+            >
+                <StandardListItem title="{sup>supNo}" type="Active" press="onSupplierSelect" />
+            </List>
+      </content>
+       <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                
+                <Button
+                    text="Cancel"
+                    press="onCancelSupplier"
+                />
+            </Toolbar>
+            </footer>
+           
+    </Dialog>
+</core:FragmentDefinition>
